@@ -1,0 +1,40 @@
+{
+    "staff" : [
+        {
+            "first_name" : "",
+            "last_name" : "",
+            "other_names" : "",
+            "staff_id" : "",
+            "grade_level" : "",
+            "membership" : [
+                {
+                    "number" : "",
+                    "subscription" : "",
+                    "license" : "",
+                    "year" : "",
+                    "conference" : "",
+                    "MTP" : "",
+                    "other" : ""
+                }
+            ]
+        },
+        {
+            "first_name" : "",
+            "last_name" : "",
+            "other_names" : "",
+            "staff_id" : "",
+            "grade_level" : "",
+            "membership" : [
+                {
+                    "number" : "",
+                    "subscription" : "",
+                    "license" : "",
+                    "year" : "",
+                    "conference" : "",
+                    "MTP" : "",
+                    "other" : ""
+                }
+            ]
+        }
+    ]
+}
