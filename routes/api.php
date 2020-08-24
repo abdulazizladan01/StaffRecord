@@ -14,6 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/staff', function(){
+   return array([
+       "name" => "Yo"
+   ]);
+});
+
+Route::post('/addStaff', function(Request $request){
+
+});
+
+Route::put('/editStaffDetails', function(Request $request){
+
+});
+
+Route::put('/retireStaff', function(Request $request){
+
+});
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
