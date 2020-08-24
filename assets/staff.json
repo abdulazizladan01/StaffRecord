@@ -1,14 +1,14 @@
 {
     "staff" : [
         {
-            "first_name" : "",
-            "last_name" : "",
-            "other_names" : "",
-            "staff_id" : "",
-            "grade_level" : "",
+            "first_name" : "Uzumaki",
+            "last_name" : "Naruto",
+            "other_names" : "Minato",
+            "staff_id" : "Jinchuruki",
+            "grade_level" : "Hokage",
             "membership" : [
                 {
-                    "number" : "",
+                    "number" : "01",
                     "subscription" : "",
                     "license" : "",
                     "year" : "",
