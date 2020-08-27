@@ -1,0 +1,15 @@
+.notification{
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 1px 1px 5px #000000;
+    a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+
+.is-success{
+    background-color: #009900;
+    color: #ffffff;
+}

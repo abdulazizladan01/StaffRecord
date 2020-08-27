@@ -1,0 +1,42 @@
+[
+    {
+        "id" : 0,
+        "first_name" : "Uzumaki",
+        "last_name" : "Naruto",
+        "other_names" : "Minato",
+        "staff_id" : "Jinchuruki",
+        "grade_level" : 124
+    },
+    {
+        "id" : 1,
+        "first_name" : "Shikamaru",
+        "last_name" : "Nara",
+        "other_names" : "",
+        "staff_id" : "",
+        "grade_level" : 14
+    },
+    {
+        "id" : 2,
+        "first_name" : "ino",
+        "last_name" : "Yamanaka",
+        "other_names" : "",
+        "staff_id" : "",
+        "grade_level" : 24
+    },
+    {
+        "id" : 3,
+        "first_name" : "Choij",
+        "last_name" : "Akimiji",
+        "other_names" : "",
+        "staff_id" : "",
+        "grade_level" : 1
+    },
+    {
+        "id" : 4,
+        "first_name" : "Uzumaki",
+        "last_name" : "Naruto",
+        "other_names" : "Minato",
+        "staff_id" : "Jinchuruki",
+        "grade_level" : 124
+    }
+]

@@ -1,0 +1,113 @@
+<div fxFlex="1 1 auto"></div>
+
+<mat-card fxFlex.lt-sm="100%" fxFlex="600px" class="mat-elevation-z5" >
+     <form [formGroup]="userForm" [hidden]="success" (ngSubmit)="submitHandler()">
+    <mat-card-header>
+        <mat-card-title>
+            Add staff details
+        </mat-card-title>
+        <mat-card-subtitle>
+            Please, ensure all records are entered correctly.
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content fxLayout="column">
+       
+            
+            <mat-form-field appearance="fill">
+                <mat-label>First name</mat-label>
+                <input matInput type="text" formControlName="first_name">
+                <mat-hint align="end">Enter employee's first name</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Last name</mat-label>
+                <input matInput type="text" formControlName="last_name">
+                <mat-hint align="end">Enter employee's last name</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Other names</mat-label>
+                <input matInput type="text" formControlName="other_names">
+                <mat-hint align="end">Enter employee's other names</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Staff ID</mat-label>
+                <input matInput type="text" formControlName="staff_id">
+                <mat-hint align="end">Enter employee's ID number</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Grade level</mat-label>
+                <input matInput type="text" formControlName="grade_level">
+                <mat-hint align="end">Enter employee's grade level</mat-hint>
+            </mat-form-field>
+            <mat-divider></mat-divider>
+
+            <a mat-stroked-button style="width: 300px" (click)="addMembership()" color="primary">
+                <mat-icon>add</mat-icon>
+                Add Membership
+            </a>
+
+            <div formArrayName="memberships">
+                <div *ngFor="let membership of memberships.controls; let i = index" [formGroupName]="i">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Body</mat-label>
+                        <input type="text" matInput formControlName="body">
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Number</mat-label>
+                        <input type="text" matInput formControlName="number">
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Subscription</mat-label>
+                        <input type="text" matInput formControlName="subscription">
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>License</mat-label>
+                        <input type="text" matInput formControlName="license">
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Year</mat-label>
+                        <input type="text" matInput formControlName="year">
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Conference</mat-label>
+                        <input type="text" matInput formControlName="conference">
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>MTP</mat-label>
+                        <input type="text" matInput formControlName="mtp">
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Others</mat-label>
+                        <input type="text" matInput formControlName="others">
+                    </mat-form-field>
+                    <button mat-icon-button (click)="deleteMembership(i)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                    <mat-divider></mat-divider>
+                </div>
+            </div>
+
+            
+       
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+        <button mat-flat-button color="primary" type="subimt" [disabled]="userForm.invalid"> Submit </button>
+    </mat-card-actions>
+    </form>
+    <div *ngIf="success" class="notification is-success">
+        <a routerLink="../">Staff details added successfully</a>
+    </div>
+</mat-card>
+
+<div fxFlex="1 1 auto"></div>

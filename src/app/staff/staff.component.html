@@ -1,0 +1,65 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <button mat-flat-button color="accent" routerLink="/add">
+            <mat-icon>add</mat-icon> Add staff
+        </button>
+        <span fxFlex="1 1 auto"></span>
+        <mat-form-field>
+            <mat-label>Search</mat-label>
+            <input matInput type="text" (keyup)="applyFilter($event.target.value)">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z1"> 
+
+    <!-- First name column -->
+    <ng-container matColumnDef="first_name">
+        <mat-header-cell *matHeaderCellDef> First name </mat-header-cell>
+        <mat-cell *matCellDef="let staff"> {{ staff.first_name }} </mat-cell>
+    </ng-container>
+
+    <!-- Last name column -->
+    <ng-container matColumnDef="last_name">
+        <mat-header-cell *matHeaderCellDef> Last name </mat-header-cell>
+        <mat-cell *matCellDef="let staff"> {{ staff.last_name }} </mat-cell>
+    </ng-container>
+
+    <!-- Other names column -->
+    <ng-container matColumnDef="other_names">
+        <mat-header-cell *matHeaderCellDef> Other names </mat-header-cell>
+        <mat-cell *matCellDef="let staff"> {{ staff.other_names }} </mat-cell>
+    </ng-container>
+
+    <!-- Staff ID column -->
+    <ng-container matColumnDef="staff_id">
+        <mat-header-cell *matHeaderCellDef> Staff ID </mat-header-cell>
+        <mat-cell *matCellDef="let staff"> {{ staff.staff_id }} </mat-cell>
+    </ng-container>
+
+    <!-- Grade level column -->
+    <ng-container matColumnDef="grade_level">
+        <mat-header-cell *matHeaderCellDef> Grade level </mat-header-cell>
+        <mat-cell *matCellDef="let staff"> {{ staff.grade_level }} </mat-cell>
+    </ng-container>
+
+    <!-- Action -->
+    <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let staff">
+            <button mat-mini-fab (click)="viewStaffDetails(staff.id)"> 
+                <mat-icon>edit</mat-icon>
+                
+            </button>
+            <button mat-mini-fab color="warn" (click)="removeStaff(staff.id)"> 
+                <mat-icon>delete</mat-icon>
+                
+            </button>             
+        </mat-cell>
+    </ng-container>
+    
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
