@@ -15,6 +15,10 @@ class CreateMembershipsTable extends Migration
     {
         Schema::create('memberships', function (Blueprint $table) {
             $table->id();
+            $table->string('staff_id');
+            $table->string('body');
+            $table->string('number');
+            $table->string('license');
             $table->timestamps();
         });
     }

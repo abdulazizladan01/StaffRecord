@@ -14,15 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/staff', function(){
-   return array([
-       "name" => "Yo"
-   ]);
-});
+Route::get('/staff', 'StaffController@index');
 
-Route::post('/addStaff', function(Request $request){
+Route::get('showSingleStaff', 'StaffController@displaySingleStaff');
 
-});
+Route::post('/addStaff', 'StaffController@create');
 
 Route::put('/editStaffDetails', function(Request $request){
 

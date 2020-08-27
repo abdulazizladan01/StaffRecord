@@ -19,7 +19,8 @@ class CreateStaffTable extends Migration
             $table->string('last_name');
             $table->string('other_names');
             $table->string('staff_id');
-            $table->tinyInteger('grade_level');
+            $table->smallInteger('grade_level');
+            $table->boolean('retired');
             $table->timestamps();
         });
     }

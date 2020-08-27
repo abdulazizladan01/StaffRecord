@@ -15,6 +15,12 @@ class CreateSubscriptionsTable extends Migration
     {
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
+            $table->string('staff_id');
+            $table->string('subscription');
+            $table->year('year');
+            $table->string('conference');
+            $table->string('mtp');
+            $table->string('other');
             $table->timestamps();
         });
     }
